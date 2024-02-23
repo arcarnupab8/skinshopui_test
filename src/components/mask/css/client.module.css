@@ -1,0 +1,49 @@
+.container, .optioninput, .title, .input{
+    display: flex;
+    justify-content: space-between;
+}
+.content {
+    display: flex;
+    position: absolute;
+    bottom: 1vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.optioninput{
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #c3c3c3;
+    margin: 0vh 1vh;
+    border-radius: 1vh;
+    padding: 1vh;
+}
+
+.input .arrow{
+    background-color: black;
+    color: white;
+    border-radius: 0.4vh;
+}
+
+.reccomend{
+    display: flex;
+    position: absolute;
+    top: 10vh;
+    right: 4vh;
+}
+.reccomend > img{
+    margin-right: 1vh;
+}
+
+.confirm{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 1vh;
+    right: 4vh;
+}
+.confirm .button{
+    background-color: blue;
+    color: white;
+    padding: 1vh;
+    border-radius: 0.5vh;
+}

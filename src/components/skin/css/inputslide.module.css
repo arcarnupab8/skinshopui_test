@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: #9E9E9E;
+    border-radius: 1vh;
+    width: 40vh;
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.8vh 0.8vh;
+}
+.title > div{
+    color: white;
+}
+.title .value{
+    background-color: #000;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    border-radius: 1vh;
+}
+
+.input{
+    display: flex;
+    justify-content: center;
+}
+.input > input{
+    width: 75%;
+}
+.input > input:hover{
+    cursor: pointer;
+}
+
+.input .arrow{
+    color: white;
+    background-color: #C3C3C3;
+    padding: 0.6vh;
+    border-radius: 0.4vh;
+}

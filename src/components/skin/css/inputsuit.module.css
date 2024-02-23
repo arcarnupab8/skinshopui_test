@@ -1,0 +1,50 @@
+.container{
+    background-color: #C3C3C3;
+    border-radius: 0.5vh;
+    border: 0.4vh solid;
+    margin: 1vh 0vh;
+}
+
+.container > div{
+    padding: 1vh;
+}
+
+.container, .suitcontent, .colorcontent{
+    display: flex;
+    justify-content: flex-end;
+}
+.container > div, .suitcontent > div, .colorcontent > div{
+    margin: 0vh 1vh;
+}
+
+
+.type > div{
+    display: flex;
+    color: white;
+    background-color: #4B4B4B;
+    width: 10vh;
+    border-radius: 0.5vh;
+}
+
+.suittitle, .colortitle{
+    justify-content: space-between;
+}
+
+.inputbtn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    bottom: 0;
+}
+.inputbtn > div{
+    padding: 0vh 0.5vh;
+    color: white;
+    background-color: #A09F9F;
+    border-radius: 0.5vh;
+}
+.inputbtn > input{
+    position: absolute;
+    bottom: -1.4vh;
+    transform: translate(-50%, 0);
+}
