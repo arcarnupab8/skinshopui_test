@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 
 import style from './css/client.module.css';
-import { menubarber, menubarberimgs, optionbarber } from '../data'; 
+import Optioninput from '../optionInput';
+import { menubarber, menubarberimgs, optionHairANDEyebrow, optionbrush, optionPaintANDLibstickANDBread, optioneyering } from '../data'; 
 
 function barberclient() {
+  const [title, setTitle] = useState('');
   const [value, setValue] = useState([0, 0, 0, 0]);
 
+  // console.log(title)
   const handlearrowLeft = (i) =>{
     if(value[i] > 0){
       setValue((prevState) => {
@@ -28,32 +31,31 @@ function barberclient() {
     <div className={style.container}>
       <div className={style.content}>
         <div className={style.option}>
-            {optionbarber.map((item, index) => (
-              <div className={style.optioninput} key={index}>
-                <div className={style.title}>
-                  <div>{item}</div>
-                  <div>{value[index]}</div>
-                </div>
-
-                <div className={style.input}>
-                  <div className={style.arrow} onClick={() => handlearrowLeft(index)}>{'<'}</div>
-                  <input
-                    type='range'
-                    value={value[index]}
-                    onInput={(e) => {
-                      const newValue = [...value];
-                      newValue[index] = e.target.value;
-                      setValue(newValue);
-                    }}
-                  />
-                  <div className={style.arrow} onClick={() => handlearrowRight(index)}>{'>'}</div>
-                </div>
-              </div>
-            ))}
+            {title === 'ทรงผม' && 
+              <Optioninput title={optionHairANDEyebrow}/>
+            }
+            {title === 'คิ้ว' && 
+              <Optioninput title={optionHairANDEyebrow}/>
+            }
+            {title === 'เพ้นท์หน้า' && 
+              <Optioninput title={optionPaintANDLibstickANDBread}/>
+            }
+            {title === 'ลิปสติก' && 
+              <Optioninput title={optionPaintANDLibstickANDBread}/>
+            }
+            {title === 'ต่างหู' && 
+              <Optioninput title={optioneyering}/>
+            }
+            {title === 'บลัช' && 
+              <Optioninput title={optionbrush}/>
+            }
+            {title === 'หนวด' && 
+              <Optioninput title={optionPaintANDLibstickANDBread}/>
+            }
         </div>
         <div className={style.navbar}>
           {menubarber.map((item, index) => (
-            <div key={index}>
+            <div key={index} onClick={(e) => setTitle(item)}>
               <img src={`./img/navbar/${menubarberimgs[index]}`} width='50vh' height='50vh'/>
               {item}
             </div>

@@ -11,24 +11,7 @@
 .option{
     display: flex;
     justify-content: center;
-}
-.option .optioninput .title{
-    display: flex;
-    justify-content: space-between;
-}
-.option .optioninput .input{
-    display: flex;
-    justify-content: space-around;
-}
-.option > div{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 23vh;
-    height: 6vh;
-    background-color: #c3c3c3;
-    margin: 0.5vh 1vh;
-    border-radius: 0.5vh;
+    margin: 0.4vh 0vh;
 }
 
 .navbar{

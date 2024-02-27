@@ -1,0 +1,22 @@
+.optioninput{
+    background-color: #c3c3c3;
+    margin: 0vh 1vh;
+    padding: 1vh;
+    border-radius: 1.4vh;
+    border: 0.2vh solid;
+}
+
+.container, .optioninput> div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input > input{
+    margin: 0vh 1vh;
+}
+.input > div{
+    background-color: black;
+    padding: 0.4vh;
+    border-radius: 0.4vh;
+    color: white;
+}

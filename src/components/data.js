@@ -23,12 +23,22 @@ export const suittype = [
 export const menubarber = [
   "ทรงผม", "คิ้ว", "เพ้นท์หน้า", "ลิปสติก", "ต่างหู", "บลัช", "หนวด"
 ];
+
 export const menubarberimgs = [
   "scissors.png", "eyebrow.png", "paint.png", "beauty.png", "round-earrings.png", "mirror-in-blush-circular-case.png", "beard.png"
 ];
 
-export const optionbarber = [
-  "รูปแบบ", "ตวามเข้ม", "ลิปสติก", "สีรอง"
+export const optionHairANDEyebrow = [
+  "รูปแบบ", "รูปแบบ2", "สีหลัก", "สีรอง"
+];
+export const optionPaintANDLibstickANDBread = [
+  "รูปแบบ", "ความเข้ม", "สีหลัก", "สีรอง"
+];
+export const optioneyering = [
+  "รูปแบบ", "สี"
+];
+export const optionbrush = [
+  "รูปแบบ", "ความเข้ม", "สี"
 ];
 
 export const optionmask = [

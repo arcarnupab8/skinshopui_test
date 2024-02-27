@@ -1,25 +1,37 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import style from './css/client.module.css';
 import Suitinput from '../skin/inputsuit';
 import { viewImgs, suittype } from '../data'; 
 
-function clothclient() {
-  const [newsuit, setNewsuit] = useState([]);
-  const [inputsuitName, setInputSuitName] = useState('');
+function clothclient({ user, max, min }) {
+  // console.log(user)
+  // console.log(max)
+  // console.log(min)
+  const [activeSuitsinput, setActiveSuitinput] = useState([]);
 
-  console.log(newsuit);
+  useEffect(() => {
+    const newInputs = suittype.map((suit, index) => (
+      <Suitinput
+        key={index}
+        dataTitle={suit}
+        dataUser={user}
+        dataMax={max}
+        dataMin={min}
+      />
+    ));
+    setActiveSuitinput(newInputs);
+  }, [suittype]);
+
   return (
     <div className={style.container}>
       <div className={style.left}>
         <div className={style.title}>ร้านเปลี่ยนชุด</div>
         <div className={style.content}>
-          {suittype.map((suit, index) => (
-            <Suitinput 
-              title={suit}
-              maxvalue={100}
-              currentvalue={10}
-            />
+          {activeSuitsinput.map((input, index) => (
+            <div key={index}>
+              {input}
+            </div>
           ))}
         </div>
       </div>

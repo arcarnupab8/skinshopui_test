@@ -1,5 +1,7 @@
 .container{
-    display: block;
+    display: flex;
+    height: 100vh;
+    margin: 0 2vh;
 }
 .content{
     display: flex;
@@ -39,9 +41,7 @@
 .right .reccomend > div{
     display: flex;
 }
-.right .reccomend .label > img{
-    padding: 0vh 3vh;
-}
+
 .right .modecontent{
     display: flex;
     flex-direction: column;
@@ -115,14 +115,15 @@
 .navbar .menulist > div{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin: 0vh 0.4vh;
-    padding: 1vh 1vh;
+    padding: 1vh 1.4vh;
     background-color: #C3C3C3;
     border: 0.2vh solid;
     border-radius: 1vh;
     width: 12vh;
-    height: 10vh;
+    height: 12vh;
 }
 .menulist > div:hover{
     cursor: pointer;
